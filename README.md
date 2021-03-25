@@ -11,7 +11,7 @@ Out of all 3 lots, only Lot 3 exceeds a 100 PSI variance, which is above specifi
 ### Density Plot (Suspension Coils)
 ![Density Plot](/Images/density_plot.png "Density Plot")  
 ### Lot 1, 2, 3 Findings
-The one-sample t-test on Lot 3 PSI vs. the overall mean returns a p-value higher than 0.05 so we fail to reject the null hypothesis and determine that the true mean is not equal to the overall population. 
+The one-sample t-test on Lot 3 PSI vs. the overall mean returns a p-value higher than 0.05 so we fail to reject the null hypothesis and determine that the true mean is equal to the overall population. 
 #### Lot 3 T-Test
 ![lot3ttest](/Images/lot3ttest.png "lot3ttest")  
   
@@ -22,6 +22,6 @@ First, gather "performance" data points from MechaCar:
 2. Torque  
 3. Top Speed  
   
-Do the same for a competitor.  You can then test this hypothesis: If we assume that these three performance data points are what customers want, MechaCar will outperform the chosen competitor if their sample means are higher than their competitor's sample means.  To reject the null hypothesis in favor of the alternative, we could see if a two-sample t-test generates a p-value of 0.05 or lower.  If so, we can say with 95% confidence that there is a statistical difference between the metrics that we test.  We would, of course, have to test each of these 3 metrics separately (I.E. MechaCar Horsepower vs. Competitor Horsepower, etc.) and would also want to make sure that the MechaCar mean is higher.
+Do the same for a competitor.  You can then test this hypothesis: If we assume that these three performance data points are what customers want, MechaCar will outperform the chosen competitor if their sample means are higher than their competitor's sample means.  To reject the null hypothesis in favor of the alternative, we could see if a two-sample t-test generates a p-value of 0.05 or lower.  If so, we can say with 95% confidence that there is a statistical difference between the metrics that we test.  We would, of course, have to test each of these 3 metrics separately (i.e. MechaCar Horsepower vs. Competitor Horsepower, etc.) and would also want to make sure that the MechaCar mean is higher.
   
-Taking this a step further, if in our second test, we find out the mean sample of Torque for MechaCar cars is 400 lb-ft vs. a competitor mean of 200 lb-ft, we can reject the null hypothesis assuming that the t-test yields a p-value of 0.05 or lower (assuming 95% confidence level).  This means that there is a statistical difference and that MechaCar outperforms its competitor in this area.
+Taking this a step further, if in our second test, we find out the mean sample of Torque for MechaCar cars is 400 lb-ft vs. a competitor mean of 200 lb-ft, we would reject the null hypothesis assuming that the t-test yields a p-value of 0.05 or lower (assuming 95% confidence level).  This would mean that there is a statistical difference and that MechaCar outperforms its competitor in this area.
