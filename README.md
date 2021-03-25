@@ -1,19 +1,21 @@
 # MechaCar Statistical Analysis
 ## Linear Regression to Predict MPG
-Vehicle length and ground clearance help explain some of the mpg variance evident by very small p-values.  The small p-value suggests that we can reject the null hypothesis and say with sufficient evidence that the slope of the linear model is not zero.  Multiple R-squared is above 0.7 so it is evident that this particular linear model does a good job helping us predict what is happening in our current dataset.  However, AWD and spoiler_angle do not contribute or help us in any way so we may have an overfitting problem.  It is worth finding more significant variables if possible since we may not be able to generalize this dataset for future use.   
+Vehicle length and ground clearance help explain some of the mpg variance evident by p-values less than 0.01.  The small p-value suggests that we can reject the null hypothesis and say with sufficient evidence that the slope of the linear model is not zero.  Multiple R-squared is above 0.7 so it is evident that this particular linear model does a good job helping us predict what is happening in our current dataset.  However, AWD and spoiler_angle do not contribute or help us in any way so we may have an overfitting problem.  It is worth finding more significant variables if possible since we may not be able to generalize this dataset for future use.     
+  
 ![linear_regression](/Images/linear_regression.png "linear_regression")  
 ## Summary Statistics on Suspension Coils
 Out of all 3 lots, only Lot 3 exceeds a 100 PSI variance, which is above specification.  Across all lots combined, PSI is under 100.  
-### Snapshot
+### Snapshot of Output
 ![Snapshot](/Images/summarize_images.png "Snapshot")  
 ## T-Tests on Suspension Coils
 ### Density Plot Suspension Coils
 ![Density Plot](/Images/density_plot.png "Density Plot")  
 ### Lot 1, 2, 3 Findings
-As expected, the one sample t-test on Lot 3 PSI vs. the overall mean returns a p-value higher than 0.05 so we can reject the null hypothesis and say with 95% confidence that the true mean is not equal to the overall population.      
+As expected, the one-sample t-test on Lot 3 PSI vs. the overall mean returns a p-value higher than 0.05 so we fail to reject the null hypothesis and say with 95% confidence that the true mean is not equal to the overall population. 
+### Lot 3 T-Test
 ![lot3ttest](/Images/lot3ttest.png "lot3ttest")  
   
-Lot 2 and 3 return very low p-values, and running this same test, we would fail to reject the null hypothesis.
+Lot 2 and 3 return very low p-values, and running this same test, we would reject the null hypothesis.
 ## Study Design: MechaCar vs Competition
 First, gather "performance" data points from MechaCar:  
 1. Horse power  
