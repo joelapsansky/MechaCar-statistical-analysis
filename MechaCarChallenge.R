@@ -22,10 +22,10 @@ lot_summary <- Suspension_Coil %>% group_by(Manufacturing_Lot) %>%
 plt <- ggplot(Suspension_Coil, aes(PSI)) #import
 plt + geom_density() #visualize distribution
 
-sample_table1 <- Suspension_Coil %>% sample_n(50) #randomly sample 50
+sample_table1 <- Suspension_Coil %>% sample_n(25) #randomly sample 50
 t.test(sample_table1$PSI,mu=mean(Suspension_Coil$PSI)) #test
 
-sample_table2 <- Suspension_Coil %>% sample_n(100) #randomly sample 100
+sample_table2 <- Suspension_Coil %>% sample_n(35) #randomly sample 100
 t.test(sample_table2$PSI,mu=mean(Suspension_Coil$PSI)) #test
 
 t.test(Suspension_Coil$PSI, mu=mean(Suspension_Coil$PSI)) #do not sample and test
@@ -44,3 +44,4 @@ t.test(lot2[['PSI']], mu=mean(Suspension_Coil$PSI)) #t test
 lot3 = subset(Suspension_Coil, Manufacturing_Lot == "Lot3")
 mean(lot3[['PSI']]) #display mean
 t.test(lot3[['PSI']], mu=mean(Suspension_Coil$PSI)) #t test
+
